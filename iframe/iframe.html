@@ -1,0 +1,30 @@
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>ha</title>
+</head>
+<body>
+	<form name="form1">
+		<div>
+			<iframe name="query" src="test.html"></iframe>
+			<iframe name="list">
+				target属性：
+_blank ---------- 新开窗口
+_self ----------- 自身
+_top ------------ 主框架
+_parent --------- 父框架
+自定义名字 ----- 出现于框架结构，将会在该名称的框架内打开链接 
+			</iframe>
+		</div>
+		<div>
+			<iframe name="theID"></iframe>
+			<iframe name="theName"></iframe>
+		</div>
+	</form>
+</body>
+
+<form name="jumpform" target="theID" action="test.html">
+	<input type="submit" value="提交">
+</form>
+
+</html>
