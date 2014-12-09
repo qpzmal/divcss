@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>练习弹出层</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,label,code,form,fieldset,legend,input,textarea,p,blockquote,th,tr,td{margin:0;padding:0; font-size:12px;font-family:"Microsoft YaHei"; }
+	body,th,td,input,select,textarea,div,p,a{font-family:"Microsoft YaHei","Tahoma","Geneva","sans-serif","SimSun";}
+	ul{list-style-type:none; }
+	html,body{height:100%;}
+
+	.popup{width:50px; height:50px; background:yellow;}
+	/* 弹出层样式 */
+	.addPage {/*display: none;*/width: 100%; height: 100%; position: fixed; top: 0; /*z-index: 100;*/}
+	.addPage .mask { background: #000; opacity: 0.3; position: absolute; width: 100%; height: 100%;}
+	.addPage .main { position: fixed; width: 100%; height: 100%; }
+	.addPage .main .content { position: relative; width: 1000px; height: 500px; margin: 50px auto 0; background: #fff; opacity: 1; box-shadow: 0px 0px 30px 5px #000; overflow-y: auto;}
+	.addPage .main .content .close { width: 15px; height: 15px; cursor: pointer; position: absolute; top: 10px; right: 16px; }
+	.addPage .main .content h3{ font: 16px/30px "Microsoft Yahei"; padding: 10px 30px;}
+	.addPage .main .content h3 span{padding-left:600px;font-size:18px;cursor:pointer;}
+    </style>
+    <script type="text/javascript" src="../jquery-1.11.1.js"></script>
+</head>
+<body>
+<div class="popup"></div>
+<script type="text/javascript">
+    $(function() {
+    	$(".popup").click(function(){
+    		// 弹出层内容
+            var addPage = "<div class='addPage'> \
+                                <div class='mask'></div> \
+                                <div class='main'> \
+                                    <div class='content'> \
+                                        <div class='close'>关闭</div> \
+                                        <h3>是是是是是是是</h3> \
+                                        <div class='load'><div style='font-size:16px;margin:30px auto;width:100px;'>正在加载...</div></div> \
+                                    </div> \
+                                </div> \
+                            </div>";
+	    	$('body').append(addPage);
+	    	$('.addPage').fadeIn('fast');
+
+    	});
+		// 关闭
+        $('body').on("click",".close",function(){
+            $(this).parents('.addPage').fadeOut('fast',function() {
+                $(this).remove();
+            });
+        });
+    })
+</script>
+</body>
+</html>

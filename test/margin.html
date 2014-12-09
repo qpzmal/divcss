@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<title>练习负数margin</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <style>
+    body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,label,code,form,fieldset,legend,input,textarea,p,blockquote,th,tr,td{margin:0;padding:0; font-size:12px;font-family:"Microsoft YaHei"; }
+	body,th,td,input,select,textarea,div,p,a{font-family:"Microsoft YaHei","Tahoma","Geneva","sans-serif","SimSun";}
+	ul{list-style-type:none; }
+	html,body{height:100%;}
+
+	body{margin:0 auto; width:1000px;}
+    .readme{}
+    .container{}
+
+	.wrap4{
+		position:relative;
+		margin:10px;
+		width:200px;
+		height:200px;
+		border:dashed 1px orange;
+	}
+
+	.wrap4 .content{
+		position:absolute;
+		width:100px;
+		height:100px;
+		top:50%;
+		left:50%;
+		margin-top:-50px;
+		margin-left:-50px;
+		background:orange;
+	}
+
+    </style>
+</head>
+<body>
+	<div class="readme">
+		参考资源http://www.cnblogs.com/dolphinX/p/4071725.html
+	</div>
+	<div class="container">
+		<div class="wrap4">
+			<div class="content"></div>
+		</div>
+	</div>
+</body>
+</html>
